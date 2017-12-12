@@ -13,6 +13,7 @@
 		012D000C1FDE379B0097F816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012D000B1FDE379B0097F816 /* Assets.xcassets */; };
 		012D000F1FDE379B0097F816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D000D1FDE379B0097F816 /* LaunchScreen.storyboard */; };
 		012D001A1FDE379B0097F816 /* Simon_SaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D00191FDE379B0097F816 /* Simon_SaysUITests.swift */; };
+		012D00251FDE502C0097F816 /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D00241FDE502C0097F816 /* CircularButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		012D00151FDE379B0097F816 /* Simon SaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simon SaysUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		012D00191FDE379B0097F816 /* Simon_SaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simon_SaysUITests.swift; sourceTree = "<group>"; };
 		012D001B1FDE379B0097F816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		012D00241FDE502C0097F816 /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		012D00031FDE379B0097F816 /* Simon Says */ = {
 			isa = PBXGroup;
 			children = (
+				012D00241FDE502C0097F816 /* CircularButton.swift */,
 				012D00041FDE379B0097F816 /* AppDelegate.swift */,
 				012D00061FDE379B0097F816 /* ViewController.swift */,
 				012D00081FDE379B0097F816 /* Main.storyboard */,
@@ -209,6 +212,7 @@
 			files = (
 				012D00071FDE379B0097F816 /* ViewController.swift in Sources */,
 				012D00051FDE379B0097F816 /* AppDelegate.swift in Sources */,
+				012D00251FDE502C0097F816 /* CircularButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5PM456KQ9M;
+				DEVELOPMENT_TEAM = LP8CFU2S63;
 				INFOPLIST_FILE = "Simon Says/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hippiewho.Simon-Says";
@@ -369,7 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5PM456KQ9M;
+				DEVELOPMENT_TEAM = LP8CFU2S63;
 				INFOPLIST_FILE = "Simon Says/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hippiewho.Simon-Says";
