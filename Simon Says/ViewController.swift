@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var colorButtons: [CircularButton]!
-    @IBOutlet var scoreLabels: [UIView]!
+    @IBOutlet var scoreLabels: [UILabel]!
     @IBOutlet var playerLabels: [UILabel]!
     @IBOutlet weak var actionButton: UIButton!
     
@@ -23,16 +23,25 @@ class ViewController: UIViewController {
     var colorSequence = [Int]()
     var colorsToTap   = [Int]()
 
+    var gameEnded = false
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if gameEnded{
+            gameEnded = false
+            createNewGame()
+        }
+    }
     override func viewDidLoad() {
         sortLabels()
         createNewGame()
     }
+    
     @IBAction func colorButtonHandler(_ sender: CircularButton) {
         if sender.tag == colorsToTap.removeFirst(){
             print("Correct")
         } else {
             for button in colorButtons {
                 button.isEnabled = false
+                endGame()
             }
             return
         }
@@ -44,6 +53,11 @@ class ViewController: UIViewController {
             
             actionButton.setTitle("Continue", for: .normal)
             actionButton.isEnabled = true
+            
+            scores[currentPlayer] += 1
+            
+            updateScoresLabel()
+            switchPlayers()
         }
     }
     @IBAction func actionButtonHandler(_ sender: UIButton) {
@@ -69,6 +83,27 @@ class ViewController: UIViewController {
             button.alpha = 1.0
             button.isEnabled = false
         }
+        
+        currentPlayer = 0
+        scores = [0,0]
+        playerLabels[0].alpha = 1.0
+        playerLabels[1].alpha = 0.5
+        
+        updateScoresLabel()
+        
+    }
+    
+    func updateScoresLabel(){
+        for (index, label) in scoreLabels.enumerated() {
+            label.text = "\(scores[index])"
+        }
+    }
+    
+    func switchPlayers() {
+        playerLabels[currentPlayer].alpha = 0.50
+        currentPlayer = currentPlayer == 0 ? 1 : 0
+        playerLabels[currentPlayer].alpha = 1.0
+        
     }
     
     func sortLabels() {
@@ -110,5 +145,9 @@ class ViewController: UIViewController {
             })
     }
     
+    func endGame() {
+        actionButton.setTitle(currentPlayer == 0 ? "Player 2 Wins!" : "Player 1 Wines!", for: .normal)
+        gameEnded = true
+    }
 }
 

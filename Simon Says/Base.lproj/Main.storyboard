@@ -174,7 +174,9 @@
                         <outletCollection property="colorButtons" destination="7KU-jy-FFj" collectionClass="NSMutableArray" id="gPv-hp-g8k"/>
                         <outletCollection property="colorButtons" destination="uhN-tV-DaF" collectionClass="NSMutableArray" id="VLa-en-xoc"/>
                         <outletCollection property="playerLabels" destination="tv6-xI-Zrh" collectionClass="NSMutableArray" id="COz-VW-C22"/>
-                        <outletCollection property="scoreLabels" destination="pNj-0A-bE0" collectionClass="NSMutableArray" id="dgX-Av-2AR"/>
+                        <outletCollection property="scoreLabels" destination="aN2-PW-nJs" collectionClass="NSMutableArray" id="9Hl-6Y-bKL"/>
+                        <outletCollection property="playerLabels" destination="gsi-eR-FGl" collectionClass="NSMutableArray" id="Z9E-iR-1Dy"/>
+                        <outletCollection property="scoreLabels" destination="LEZ-ox-Exd" collectionClass="NSMutableArray" id="038-5f-BHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
